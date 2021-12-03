@@ -11,7 +11,8 @@ const mConection = process.env.MONGOOSE_CONECTION;
 
 // Routes
 
-// Middlewares
+// Middleware
+app.use(express.json()); // Transform the data obtained from json to js
 app.use('/api', userRoutes); // All routes must use '/api' before the url
 
 // Main route of the app
