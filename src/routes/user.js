@@ -21,4 +21,13 @@ router.get('/users', (req, res) => {
         .catch((err) => res.json({ message: err }));
 });
 
+// Get a user
+router.get('/users/:id', (req, res) => {
+    const { id } = req.params; // Get the ID that is in the request's params
+    userSchema
+        .findById(id)
+        .then((data) => res.json(data)) // What to do if it's correct
+        .catch((err) => res.json({ message: err }));
+});
+
 module.exports = router;
