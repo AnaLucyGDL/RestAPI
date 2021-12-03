@@ -3,12 +3,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const env = require('node-env-file');
 const app = express();
+const userRoutes = require('./routes/user');
 
 env('./.env');
 const port = process.env.PORT || 9001;
 const mConection = process.env.MONGOOSE_CONECTION;
 
 // Routes
+
+// Middlewares
+app.use('/api', userRoutes); // All routes must use '/api' before the url
 
 // Main route of the app
 app.get('/', (req, res) => { // req - Request object / res - Response object
