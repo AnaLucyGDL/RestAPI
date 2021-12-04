@@ -33,7 +33,7 @@ router.get('/users/:id', (req, res) => {
 // Update a user
 router.put('/users/:id', (req, res) => {
     const { id } = req.params; // Get the ID that is in the request's params
-    const { name, age, email } = req.body; // Get the fields that can be updated
+    const { name, email } = req.body; // Get the fields that can be updated
     userSchema
         .updateOne({ _id:id }, { $set: {name, age, email} }) // To which element will it refers, and the fields to update
         .then((data) => res.json(data)) // What to do if it's correct
