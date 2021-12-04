@@ -13,3 +13,13 @@ GET http://localhost:9000/api/users HTTP/1.1
 
 ###
 GET http://localhost:9000/api/users/61aaa967a832a02a9f8c0425 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/61aaa967a832a02a9f8c0425 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Vianney Baez",
+    "age": 20,
+    "email": "vbaez@gmail.com"
+}  
