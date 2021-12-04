@@ -27,4 +27,4 @@ mongoose.connect(mConection)
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch((err) => console.error(err));
 
-app.listen(port, () => console.log(`Server working on port ${port}`));
+app.listen(port, () => console.log(`Server working on port ${app.get('port')}`));
