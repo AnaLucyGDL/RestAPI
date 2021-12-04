@@ -23,3 +23,6 @@ Content-Type: application/json
     "age": 20,
     "email": "vbaez@gmail.com"
 }  
+
+###
+DELETE http://localhost:9000/api/users/61aab1676657551c97733e4e HTTP/1.1

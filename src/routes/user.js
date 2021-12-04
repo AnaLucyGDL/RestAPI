@@ -40,4 +40,13 @@ router.put('/users/:id', (req, res) => {
         .catch((err) => res.json({ message: err }));
 });
 
+// Delete a user
+router.delete('/users/:id', (req, res) => {
+    const { id } = req.params; // Get the ID that is in the request's params
+    userSchema
+        .deleteOne({ _id:id }) // To which element will it refers to delete it
+        .then((data) => res.json(data)) // What to do if it's correct
+        .catch((err) => res.json({ message: err }));
+});
+
 module.exports = router;
