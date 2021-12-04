@@ -6,7 +6,7 @@ const app = express();
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 
-env('./.env');
+env('./app/.env');
 const port = process.env.PORT || 9001;
 const mConection = process.env.MONGOOSE_CONECTION;
 
